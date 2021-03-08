@@ -14,8 +14,11 @@ if(hours < 10) {
   hours = '0' + hours;
 }
 var clockFace = hours + ':' + minutes + ':' + seconds;
+var hexColor = '#' + hours + minutes + seconds;
 
 document.getElementById('clock').innerHTML = clockFace;
+document.body.style.color = "yellow";
+document.body.style.background = hexColor;
 
 setTimeout(function() {
   colorClock();
